@@ -1,28 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
+// komponent funkcyjny
+// funkcja która zwraca "html/jsx"
 
-// komentarz 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// deklaracja komponentu
+function AppSection(props) {
+  const { title="Default Title", counter, isActive, showAlertProp, data, arr } = props
+  console.log('props', props)
+
+	return (
+    <section className='attention'>
+      <div className='wrapper'>
+        {isActive && <h3>is active</h3>}
+
+        <h1>{title}</h1>
+        <h2>{counter}</h2>
+        {isActive === true  ? <h3>is active</h3> : <h4>not active</h4>} 
+
+        <h4>{JSON.stringify(data)}</h4>
+ 
+        {arr.map((element, key)=>{
+          return <h3 key={key}>{element}</h3>
+        })}
+     
+      </div>
+		</section>
+	)
 }
 
-export default App;
+
+function showAlert(){
+  alert('test')
+}
+
+function HomePage() {
+  return (<div className='app'>
+    {/* wywołanie tego komponentu */}
+    <AppSection title={'test'} 
+    isActive={true} counter={1} 
+    showAlertProp={showAlert}
+      data={{'key':0}}
+      arr={[0,1,"test",3,4]}
+    />
+    {/* wywołanie tego komponentu - ver 2 */}
+   
+  </div>)
+}
+
+export default HomePage
