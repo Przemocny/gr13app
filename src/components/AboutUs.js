@@ -17,6 +17,8 @@ const people = [
 ]
 
 const SinglePerson = ({fullName, image, department, description})=>{
+
+    
     return (<div className='employee'>
         <div className="employee-image">
             <img src={image}/>
