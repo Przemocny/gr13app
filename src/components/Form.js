@@ -6,7 +6,9 @@ class Form extends React.Component{
     state = {
         email:'przemyslaw.jozwiakowski@gmail.com',
         password:'testerzy123',
-        agreement: false
+        agreement: false,
+        imBusy: false,
+        message:''
     }
 
     onInputChange = (event)=>{
@@ -45,10 +47,23 @@ class Form extends React.Component{
         return isFormValid
     }
 
+    componentDidUpdate(prevProps, prevState){
+        if(this.state.message.length > 0){
+            setTimeout(()=>{
+                this.setState({
+                    message:''
+                })
+            },3000)
+        }
+    }
+
     onSubmitForm = (event)=>{
         event.preventDefault()
 
         if(this.isFormValidCorrectly()){
+            this.setState({
+                imBusy:true
+            })
 
             console.log('onSubmit - ajax', this.state)
         
@@ -56,19 +71,29 @@ class Form extends React.Component{
                 this.setState({
                     email:'',
                     password:'',
-                    agreement: false
+                    agreement: false,
+                    message: 'Wysłano poprawnie',
+                    imBusy:false
                 })
-            }, 333)
+            }, 1000)
         }
         else{
-            alert('zle dane formularza')
+            // alert('zle dane formularza')
+            this.setState({
+                message: 'Jest błąd, popraw dane'
+            })
         }
 
 
     }
 
     render(){
-        const {email, password, agreement} = this.state
+        const {email, password, agreement, message, imBusy} = this.state
+
+        if(imBusy){
+            return <div>Wysyłam, proszę czekać</div>
+        }
+
         return (
             <div className="form-wrapper">
                 <form onSubmit={this.onSubmitForm}>
@@ -79,6 +104,7 @@ class Form extends React.Component{
                     <input type="checkbox" name="agreement"  
                         onChange={this.onInputChange} checked={agreement}/>
                     <button>Submit</button>
+                    {message.length !== 0 && <h4>{message}</h4>}
                 </form>
             </div>
         )
