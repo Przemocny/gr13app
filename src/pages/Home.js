@@ -6,22 +6,27 @@ class HomePage extends React.Component {
     state = { imOnView : true }
 
     componentDidMount(){
-        setTimeout(()=>{
-            this.setState({
-                imOnView:false
-            })
-        }, 5000)
+        // setTimeout(()=>{
+        //     this.setState({
+        //         imOnView:false
+        //     })
+        // }, 5000)
     }
 
     render(){
         return (<div className='page home-page' style={{padding:20}}>
-            {this.state.imOnView && <LifeCycle data={[]}/>}
+       
+        <Navigation/>
+        <LandingPage/>
+        <AboutUs/>
+        <Offer/>
+        <Footer/>
+
+
             {/*
+            {this.state.imOnView && <LifeCycle data={[]}/>}
+
             <Form/>
-            <LandingPage/>
-            <AboutUs/>
-            <Offer/>
-            <Footer/>
             */}
     </div>)
     }

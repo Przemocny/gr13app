@@ -3,9 +3,11 @@ import React from 'react'
 
 class Form extends React.Component{
 
+    email = React.createRef()
+
     state = {
-        email:'przemyslaw.jozwiakowski@gmail.com',
-        password:'testerzy123',
+        email:'',
+        password:'',
         agreement: false,
         imBusy: false,
         message:''
@@ -87,6 +89,11 @@ class Form extends React.Component{
 
     }
 
+    componentDidMount(){
+        this.email.current.focus()
+        // console.log(this.email)
+    }
+
     render(){
         const {email, password, agreement, message, imBusy} = this.state
 
@@ -98,6 +105,7 @@ class Form extends React.Component{
             <div className="form-wrapper">
                 <form onSubmit={this.onSubmitForm}>
                     <input type="email" placeholder="your email" name="email" 
+                        ref={this.email}
                         onChange={this.onInputChange} value={email}/>
                     <input type="password" placeholder="your password" name="password"  
                         onChange={this.onInputChange} value={password}/>
