@@ -2,6 +2,8 @@ import React from 'react';
 import HomePage from './pages/Home';
 import {HashRouter as Router, Route, Switch, Link, Redirect, withRouter} from 'react-router-dom';
 
+import ReduxComponent from './redux-app/ReduxComponent'
+
 const PageNotFound = () => {
   return <div>404 - page not found</div>;
 };
@@ -36,7 +38,7 @@ function MainApp () {
         <Switch>
 
           <Route path="/" exact>
-            <HomePage />
+           <ReduxComponent/>
           </Route>
 
           <Route path="/blog" exact>
