@@ -2,11 +2,15 @@ import React, {useEffect} from 'react'
 import { connect } from 'react-redux'
 import { actions } from './store'
 
+// redux
+// krótko o hooks
+// krótko o jest i TDD
 
 const onInit = (props)=>{
     const {startLoadingPosts, loadPostsWithSuccess, loadPostsWithFailure} = props
 
     startLoadingPosts()
+
     setTimeout(()=>{
         if (Math.random() > 0.5){
             loadPostsWithSuccess({posts:['post1','post2','post3']})
@@ -16,8 +20,6 @@ const onInit = (props)=>{
         }
     }, 3000)
 }
-
-
 
 const ReduxComponent = (props) => {
     useEffect(()=>{

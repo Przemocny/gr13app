@@ -10,8 +10,6 @@ const PageNotFound = () => {
 
 // withRouter HOC - high order component
 
-
-
 // client side
 // url -> inny komponent -> render
 
