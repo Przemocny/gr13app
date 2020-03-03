@@ -6,6 +6,8 @@ import { actions } from './store'
 // krótko o hooks
 // krótko o jest i TDD
 
+
+
 const onInit = (props)=>{
     const {startLoadingPosts, loadPostsWithSuccess, loadPostsWithFailure} = props
 
