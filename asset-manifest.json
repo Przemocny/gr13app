@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/gr13app/static/css/main.43c903a5.chunk.css",
+    "main.js": "/gr13app/static/js/main.e4238ee7.chunk.js",
+    "main.js.map": "/gr13app/static/js/main.e4238ee7.chunk.js.map",
+    "runtime-main.js": "/gr13app/static/js/runtime-main.9b411531.js",
+    "runtime-main.js.map": "/gr13app/static/js/runtime-main.9b411531.js.map",
+    "static/js/2.3b7b460b.chunk.js": "/gr13app/static/js/2.3b7b460b.chunk.js",
+    "static/js/2.3b7b460b.chunk.js.map": "/gr13app/static/js/2.3b7b460b.chunk.js.map",
+    "index.html": "/gr13app/index.html",
+    "precache-manifest.25988664164bc8646bb2a696cc5988d3.js": "/gr13app/precache-manifest.25988664164bc8646bb2a696cc5988d3.js",
+    "service-worker.js": "/gr13app/service-worker.js",
+    "static/css/main.43c903a5.chunk.css.map": "/gr13app/static/css/main.43c903a5.chunk.css.map",
+    "static/js/2.3b7b460b.chunk.js.LICENSE.txt": "/gr13app/static/js/2.3b7b460b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9b411531.js",
+    "static/js/2.3b7b460b.chunk.js",
+    "static/css/main.43c903a5.chunk.css",
+    "static/js/main.e4238ee7.chunk.js"
+  ]
+}

@@ -1,0 +1,2 @@
+(this.webpackJsonpgr13app=this.webpackJsonpgr13app||[]).push([[0],[,,,function(e,n,t){e.exports=t(10)},,,,,function(e,n,t){},function(e,n,t){},function(e,n,t){"use strict";t.r(n);var a=t(0),r=t.n(a),c=t(2),p=t.n(c),o=(t(8),t(9),function(){return r.a.createElement("div",{className:"app"},r.a.createElement("h1",null,"apka"))});p.a.render(r.a.createElement(o,null),document.getElementById("root"))}],[[3,1,2]]]);
+//# sourceMappingURL=main.e4238ee7.chunk.js.map
